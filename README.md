@@ -1,29 +1,25 @@
-# my-site
+This is the code repository for the Vue Videos series, which will be available on YouTube and/or Medium.
 
-This template should help get you started developing with Vue 3 in Vite.
+Some details about our codebase/tools we use:
+- Vue (obviously)
+- Tailwind CSS
+- Pug
+- TypeScript (not really "typing" everything, mostly just for the nice syntax of defining component classes)
 
-## Recommended IDE Setup
+In general, I will be creating some Vue components or discussing various Vue features, and I'm glad to have you here :)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Customize configuration
+### Reusable Modal ###
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+*Part 1*: https://youtu.be/5kRClThy-y8
 
-## Project Setup
+*Part 2*: https://youtu.be/f3RHHGk6iHs
 
-```sh
-npm install
-```
+### Vue Transitions ###
 
-### Compile and Hot-Reload for Development
+https://youtu.be/LTRvj9LUdgs
 
-```sh
-npm run dev
-```
+### Events in Vue ###
 
-### Compile and Minify for Production
+*Part 1*: https://youtu.be/zx4XoZyZRcI
 
-```sh
-npm run build
-```

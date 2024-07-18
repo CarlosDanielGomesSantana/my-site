@@ -1,10 +1,9 @@
-#!/usr/bin/env sh
-
-# abort on errors
-set -e
-
 # build
 npm run build
+
+# save the latest commit hash as a string
+LOGSTRING=$(git log)
+COMMIT=$(echo $LOGSTRING | awk '{print $2}')
 
 # navigate into the build output directory
 cd dist
@@ -13,13 +12,14 @@ cd dist
 # echo 'www.example.com' > CNAME
 
 git init
-git add .
-git commit -m 'deploy'
+git add -A
+git commit -m "deploy (commit: $COMMIT)"
 
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:carlosdanielgomessantana/carlosdanielgomessantana.github.io.git main
+# if you are using SSH key authentication
+# git push -f git@github.com:<USER-NAME>/<REPO>.git master:gh-pages
 
-# if you are deploying to https://CarlosDanielGomesSantana.github.io/<REPO>
-git push -f git@github.com:carlosdanielgomessantana/my-site.git main:gh-pages
+# if you are using HTTPS/2FA authentication
+# git push -f https://github.com/<USER-NAME>/<REPO>.git master:gh-pages
+git push -f https://github.com/carlosdanielgomessantana/my-site.git master:gh-pages
 
 cd ..
